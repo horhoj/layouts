@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  margin: 200px auto 0;
+  margin: 0 auto;
   max-width: 1024px;
   display: flex;
   flex-direction: column;

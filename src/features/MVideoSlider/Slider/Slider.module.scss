@@ -1,0 +1,102 @@
+$BOX_SHADOW_VALUE: 0 1px 20px rgba(0, 0, 0, .4);
+
+
+.wrap {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: $BOX_SHADOW_VALUE;
+
+}
+
+.cardScroll {
+  display: flex;
+  height: 350px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.cardWrap {
+  display: flex;
+  height: 350px;
+  gap: 50px;
+  width: 300px;
+  justify-content: center;
+
+  & > div:nth-child(1), & > div:nth-child(3) {
+    opacity: 0;
+  }
+}
+
+.cardWrapTransition {
+  transition: all 800ms ease;
+}
+
+.showNextAnimation {
+  margin-left: -250px;
+
+  & > div {
+    transition: all 1000ms ease;
+  }
+
+  & > div:nth-child(2) {
+    opacity: 0;
+    transform: scale(.9);
+
+  }
+
+  & > div:nth-child(3) {
+    opacity: 1;
+  }
+}
+
+.showPrevAnimation {
+  margin-left: 250px;
+
+  & > div {
+    transition: all 1000ms ease;
+  }
+
+  & > div:nth-child(2) {
+    opacity: 0;
+    transform: scale(.9);
+  }
+
+  & > div:nth-child(1) {
+    opacity: 1;
+  }
+
+}
+
+.btn {
+  border-radius: 50%;
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: $BOX_SHADOW_VALUE;
+
+  &:hover {
+    //opacity: 0.8;
+  }
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  left: -15px;
+}
+
+.right {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+}
