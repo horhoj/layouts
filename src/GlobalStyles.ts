@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   *,
   *::before,
   *::after {
-    font-family: DevCoder, monospace;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  margin: 0 auto;
+  margin: 200px auto 0;
   max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 `;
