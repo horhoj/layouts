@@ -1,4 +1,5 @@
 $BOX_SHADOW_VALUE: 0 1px 20px rgba(0, 0, 0, .4);
+$TRANSITION_DURATION: 800ms;
 
 
 .wrap {
@@ -7,8 +8,8 @@ $BOX_SHADOW_VALUE: 0 1px 20px rgba(0, 0, 0, .4);
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: end;
+  align-items: flex-start;
+  justify-content: flex-end;
   position: relative;
   border-radius: 5px;
   box-shadow: $BOX_SHADOW_VALUE;
@@ -35,14 +36,14 @@ $BOX_SHADOW_VALUE: 0 1px 20px rgba(0, 0, 0, .4);
 }
 
 .cardWrapTransition {
-  transition: all 800ms ease;
+  transition: all $TRANSITION_DURATION ease;
 }
 
 .showNextAnimation {
   margin-left: -250px;
 
   & > div {
-    transition: all 1000ms ease;
+    transition: all $TRANSITION_DURATION ease;
   }
 
   & > div:nth-child(2) {
@@ -60,7 +61,7 @@ $BOX_SHADOW_VALUE: 0 1px 20px rgba(0, 0, 0, .4);
   margin-left: 250px;
 
   & > div {
-    transition: all 1000ms ease;
+    transition: all $TRANSITION_DURATION ease;
   }
 
   & > div:nth-child(2) {
@@ -83,6 +84,9 @@ $BOX_SHADOW_VALUE: 0 1px 20px rgba(0, 0, 0, .4);
   outline: none;
   cursor: pointer;
   box-shadow: $BOX_SHADOW_VALUE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     //opacity: 0.8;
@@ -99,4 +103,65 @@ $BOX_SHADOW_VALUE: 0 1px 20px rgba(0, 0, 0, .4);
   position: absolute;
   top: 50%;
   right: -15px;
+}
+
+.title {
+  width: 150px;
+  height: 40px;
+  background-color: #12a2bf;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewY(-10deg);
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 5;
+}
+
+.countDown {
+  width: 100px;
+  height: 40px;
+  background-color: #0e7e95;
+  position: absolute;
+  left: -20px;
+  top: 35px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewY(-10deg);
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 4;
+}
+
+.countDownShadow {
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  position: absolute;
+  left: -20px;
+  top: 73px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewY(40deg);
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.btnIcon {
+  width: 20px;
+  height: 20px;
+  color: #e31235;
+
+  &:hover {
+    color: #bd0f2c;
+  }
 }

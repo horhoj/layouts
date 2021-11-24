@@ -1,6 +1,133 @@
+$COLOR_RED: #e31235;
+$COLOR_GRAY: #7e7e83;
+
 .wrap {
   min-width: 200px;
   height: 350px;
-  background-color: #ddd;
+  position: relative;
+}
 
+.imgWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.titleWrap {
+  margin-top: 13px;
+}
+
+.discountWrap {
+  width: 50px;
+  height: 25px;
+  background-color: #12a2bf;
+  position: absolute;
+  right: 0;
+  top: 130px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewY(-10deg);
+  box-shadow: 2px 2px 2px black;
+}
+
+.iconStar {
+  width: 14px;
+  height: 14px;
+  color: $COLOR_RED;
+  margin-right: 5px;
+}
+
+.ratioWrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ratio {
+  color: #e31235;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-right: 7px;
+}
+
+.ratioCount {
+  color: $COLOR_GRAY;
+}
+
+.priceWrap {
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 20px;
+  margin-right: 5px;
+
+  &::after {
+    content: '\20bd';
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}
+
+.priceOld {
+  color: $COLOR_GRAY;
+  text-decoration-line: line-through;
+}
+
+.buttonsWrap {
+  margin-top: 10px;
+  display: flex;
+}
+
+.buttonCart {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 60px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: $COLOR_RED;
+  margin-right: 10px;
+
+  &:hover {
+    background-color: #bd0f2c;
+  }
+}
+
+.iconCart {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 30px;
+  height: 35px;
+  border-radius: 5px;
+  color: $COLOR_GRAY;
+  background-color: #fff;
+
+  &:hover {
+    color: #444;
+  }
+}
+
+.iconLove {
+  width: 20px;
+  height: 20px;
+}
+
+.iconHistogram {
+  width: 20px;
+  height: 20px;
 }
