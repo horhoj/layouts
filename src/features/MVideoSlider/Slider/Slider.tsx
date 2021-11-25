@@ -21,6 +21,14 @@ export const Slider: FC<SliderProps> = ({ sliderItemList }) => {
   const [isTransition, setIsTransition] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState<number>(new Date().getTime());
   const [isGoNext, setIsGoNext] = useState<boolean>(false);
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    return () => {
+      setIsMounted(false);
+    };
+  }, []);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -55,25 +63,23 @@ export const Slider: FC<SliderProps> = ({ sliderItemList }) => {
   }, [sliderItemList]);
 
   const handlePrevBtnClk = () => {
-    if (!isBlock) {
-      if (!isBlock) {
-        setIsBlock(true);
-        setIsPrevAnimate(true);
-        setIsTransition(true);
-        setTimeout(() => {
-          setIsPrevAnimate(false);
-          setIsBlock(false);
-          setIsTransition(false);
-          setCurrentSlideIndex((prev) =>
-            getPrevSlideIndex(prev, slideListLength),
-          );
-        }, ANIMATION_DELAY);
-      }
+    if (!isBlock && isMounted) {
+      setIsBlock(true);
+      setIsPrevAnimate(true);
+      setIsTransition(true);
+      setTimeout(() => {
+        setIsPrevAnimate(false);
+        setIsBlock(false);
+        setIsTransition(false);
+        setCurrentSlideIndex((prev) =>
+          getPrevSlideIndex(prev, slideListLength),
+        );
+      }, ANIMATION_DELAY);
     }
   };
 
   const handleNextBtnClk = () => {
-    if (!isBlock) {
+    if (!isBlock && isMounted) {
       setIsBlock(true);
       setIsNextAnimate(true);
       setIsTransition(true);
