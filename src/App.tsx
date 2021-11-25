@@ -1,11 +1,12 @@
 import React from 'react';
-import { Container } from './GlobalStyles';
-import { MVideoSlider } from './features/MVideoSlider/MVideoSlider';
+import { Router } from './router';
+import { Back } from './componets/Back';
 
 export const App: React.FC = () => {
   return (
-    <Container>
-      <MVideoSlider />
-    </Container>
+    <>
+      <Back />
+      <Router />
+    </>
   );
 };

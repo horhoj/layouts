@@ -1,0 +1,38 @@
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding: 20px;
+
+}
+
+.featureCard {
+  width: 300px;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, .4);
+
+
+}
+
+.featureImgPreviewWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.featureImgPreview {
+  height: 300px;
+}
+
+.featureDescription {
+  margin-top: 20px;
+  text-align: center;
+  height: 100px;
+  overflow-y: auto;
+}
+
+.featureTitle {
+  text-align: center;
+  font-weight: 500;
+}
