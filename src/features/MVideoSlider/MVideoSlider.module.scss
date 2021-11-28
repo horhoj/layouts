@@ -1,8 +1,6 @@
 .wrap {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
+  margin: 100px auto auto auto;
+  width: fit-content;
+  height: fit-content;
 }
