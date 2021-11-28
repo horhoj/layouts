@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -11,13 +11,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-`;
-
-export const Container = styled.div`
-  margin: 0 auto;
-  max-width: 1024px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+  
+  body {
+    background-color: #eee;
+  }
 `;
