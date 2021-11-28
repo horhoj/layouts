@@ -1,13 +1,12 @@
 .wrap {
-  height: 100vh;
-  background-color: #eee;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   user-select: none;
-  margin: 0 auto;
+  margin: 100px auto 0;
+  padding: 20px;
 }
 
 .QuestionListWrap {
-  max-width: 1024px;
+  max-width: 800px;
 }

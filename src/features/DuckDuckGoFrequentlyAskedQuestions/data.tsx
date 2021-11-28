@@ -75,7 +75,7 @@ export const data: Question[] = [
       <>
         DuckDuckGo search gives you truly private search results without
         tradeoffs in result quality. We have everything you’ve come to expect in
-        an online search experience, and a few
+        an online search experience, and a few{' '}
         <a
           href="https://duckduckgo.com/bang"
           target="_blank"

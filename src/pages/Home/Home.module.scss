@@ -7,7 +7,8 @@
 }
 
 .featureCard {
-  width: 300px;
+  width: 400px;
+
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 1px 20px rgba(0, 0, 0, .4);
@@ -17,12 +18,15 @@
 
 .featureImgPreviewWrap {
   margin-top: 20px;
+  height: 300px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .featureImgPreview {
-  height: 300px;
+  max-width: 390px;
+  max-height: 300px;
 }
 
 .featureDescription {
