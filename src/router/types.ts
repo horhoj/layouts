@@ -9,4 +9,8 @@ export interface RouteItem {
   description: string;
 }
 
-export type Routes = 'Home' | 'MVideoSlider' | 'Page404';
+export type Routes =
+  | 'Home'
+  | 'MVideoSlider'
+  | 'DuckDuckGoFrequentlyAskedQuestions'
+  | 'Page404';
