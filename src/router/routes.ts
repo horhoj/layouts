@@ -4,6 +4,7 @@ import { MVideoSlider } from '../features/MVideoSlider';
 import imgPreviewMVideoSlider from '../features/MVideoSlider/imgPreview.png';
 import imgPreviewDuckDuckGoFrequentlyAskedQuestions from '../features/DuckDuckGoFrequentlyAskedQuestions/imgPreview.png';
 import { DuckDuckGoFrequentlyAskedQuestions } from '../features/DuckDuckGoFrequentlyAskedQuestions';
+import { ClockFaceFeature } from '../features/ClockFaceFeature';
 import { RouteItem } from './types';
 
 export const routes: RouteItem[] = [
@@ -30,7 +31,15 @@ export const routes: RouteItem[] = [
     component: DuckDuckGoFrequentlyAskedQuestions,
     imgPreview: imgPreviewDuckDuckGoFrequentlyAskedQuestions,
     description:
-      'faq вопросов с DuckDuckGo, с интересной анимацией открытия и закрытия ответа на вопрос',
+      'FAQ вопросов с DuckDuckGo, с интересной анимацией открытия и закрытия ответа на вопрос',
+  },
+  {
+    route: 'ClockFace',
+    path: 'clock-face',
+    component: ClockFaceFeature,
+    isFeature: true,
+    imgPreview: '',
+    description: 'Циферблат с анимацией',
   },
   {
     route: 'Page404',

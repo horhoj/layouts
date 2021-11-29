@@ -13,4 +13,5 @@ export type Routes =
   | 'Home'
   | 'MVideoSlider'
   | 'DuckDuckGoFrequentlyAskedQuestions'
+  | 'ClockFace'
   | 'Page404';
