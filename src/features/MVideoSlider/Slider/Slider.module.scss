@@ -14,6 +14,10 @@ $TRANSITION_DURATION: 800ms;
   border-radius: 5px;
   box-shadow: $BOX_SHADOW_VALUE;
 
+  & button:focus {
+    outline: 4px solid green;
+  }
+
 }
 
 .cardScroll {
@@ -32,6 +36,7 @@ $TRANSITION_DURATION: 800ms;
 
   & > div:nth-child(1), & > div:nth-child(3) {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -44,6 +49,7 @@ $TRANSITION_DURATION: 800ms;
 
   & > div {
     transition: all $TRANSITION_DURATION ease;
+    visibility: visible;
   }
 
   & > div:nth-child(2) {
@@ -54,6 +60,7 @@ $TRANSITION_DURATION: 800ms;
 
   & > div:nth-child(3) {
     opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -62,6 +69,7 @@ $TRANSITION_DURATION: 800ms;
 
   & > div {
     transition: all $TRANSITION_DURATION ease;
+    visibility: visible;
   }
 
   & > div:nth-child(2) {
@@ -71,6 +79,7 @@ $TRANSITION_DURATION: 800ms;
 
   & > div:nth-child(1) {
     opacity: 1;
+    visibility: visible;
   }
 
 }
