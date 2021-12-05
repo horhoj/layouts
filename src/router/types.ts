@@ -11,7 +11,7 @@ export interface RouteItem {
 
 export type Routes =
   | 'Home'
+  | 'ClockFace'
   | 'MVideoSlider'
   | 'DuckDuckGoFrequentlyAskedQuestions'
-  | 'ClockFace'
   | 'Page404';

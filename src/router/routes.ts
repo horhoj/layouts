@@ -18,6 +18,14 @@ export const routes: RouteItem[] = [
     description: '',
   },
   {
+    route: 'ClockFace',
+    path: 'clock-face',
+    component: ClockFaceFeature,
+    isFeature: true,
+    imgPreview: imgPreviewClockFaceFeature,
+    description: 'Циферблат с анимацией',
+  },
+  {
     route: 'MVideoSlider',
     path: 'm-video-slider',
     component: MVideoSlider,
@@ -33,14 +41,6 @@ export const routes: RouteItem[] = [
     imgPreview: imgPreviewDuckDuckGoFrequentlyAskedQuestions,
     description:
       'FAQ вопросов с DuckDuckGo, с интересной анимацией открытия и закрытия ответа на вопрос',
-  },
-  {
-    route: 'ClockFace',
-    path: 'clock-face',
-    component: ClockFaceFeature,
-    isFeature: true,
-    imgPreview: imgPreviewClockFaceFeature,
-    description: 'Циферблат с анимацией',
   },
   {
     route: 'Page404',
