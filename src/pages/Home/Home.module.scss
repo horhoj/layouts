@@ -18,15 +18,16 @@
 
 .featureImgPreviewWrap {
   margin-top: 20px;
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .featureImgPreview {
-  max-width: 390px;
-  max-height: 300px;
+  max-width: 360px;
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
 }
 
 .featureDescription {

@@ -13,7 +13,6 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    //background-color: #eee;
-    min-width: 440px;
+    min-width: 400px;
   }
 `;

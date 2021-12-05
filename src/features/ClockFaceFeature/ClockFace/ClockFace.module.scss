@@ -3,7 +3,7 @@ $BACKGROUND_COLOR: #fff;
 
 .wrap {
   background-color: $BACKGROUND_COLOR;
-  width: 400px;
+  width: 100%;
   aspect-ratio: 1;
   position: relative;
   overflow: hidden;
@@ -71,8 +71,8 @@ $BACKGROUND_COLOR: #fff;
   display: flex;
 
   & > div {
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 22px;
+    line-height: 22px;
   }
 }
 
@@ -89,7 +89,7 @@ $BACKGROUND_COLOR: #fff;
  }
 
 .value {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 

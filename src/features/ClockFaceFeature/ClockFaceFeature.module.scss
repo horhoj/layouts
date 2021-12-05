@@ -1,10 +1,11 @@
 .wrap {
   display: flex;
   margin: 100px auto auto auto;
-  width: fit-content;
-  height: fit-content;
+  width: 400px;
   flex-direction: column;
+  //justify-content: center;
   user-select: none;
+  padding: 20px;
 }
 
 .controlPanel {
