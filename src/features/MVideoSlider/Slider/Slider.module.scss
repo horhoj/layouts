@@ -13,9 +13,11 @@ $TRANSITION_DURATION: 800ms;
   position: relative;
   border-radius: 5px;
   box-shadow: $BOX_SHADOW_VALUE;
+  outline: none;
 
   & button:focus {
-    outline: 4px solid green;
+    outline: none;
+    box-shadow: 0 1px 20px rgba(0, 0, 255, .8);
   }
 
 }
