@@ -14,4 +14,5 @@ export type Routes =
   | 'ClockFace'
   | 'MVideoSlider'
   | 'DuckDuckGoFrequentlyAskedQuestions'
+  | 'YandexRealty'
   | 'Page404';

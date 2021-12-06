@@ -1,0 +1,96 @@
+$BOX_SHADOW_VALUE: 0 1px 20px rgba(0, 0, 0, .4);
+$COLOR: #000;
+$COLOR_HOVER: #f0f1f5;
+$COLOR_BACKGROUND: #fff;
+
+.titleWrap {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.titleLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: $COLOR;
+}
+
+.titleLinkImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-image: url("img/logo.svg");
+  transition: filter 300ms ease;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    filter: contrast(.5);
+  }
+}
+
+.title3dotMenuButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-image: url("img/title3dot.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: filter 300ms ease;
+  border: none;
+  cursor: pointer;
+  background-color: $COLOR_BACKGROUND;
+
+  &:hover {
+    background-color: $COLOR_HOVER;
+  }
+}
+
+.title3dotMenuList {
+  width: 115px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  background-color: $COLOR_BACKGROUND;
+  top: 45px;
+  border-radius: 10px;
+  box-shadow: $BOX_SHADOW_VALUE;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+
+  & > li > button {
+    border: none;
+    background-color: $COLOR_BACKGROUND;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $COLOR_HOVER;
+    }
+  }
+}
+
+.eyeIcon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-image: url("./img/eye.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title3dotMenuHidden {
+  opacity: 0;
+  visibility: hidden;
+  top: 70px;
+}

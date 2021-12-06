@@ -6,6 +6,7 @@ import imgPreviewDuckDuckGoFrequentlyAskedQuestions from '../features/DuckDuckGo
 import imgPreviewClockFaceFeature from '../features/ClockFaceFeature/imgPreview.png';
 import { DuckDuckGoFrequentlyAskedQuestions } from '../features/DuckDuckGoFrequentlyAskedQuestions';
 import { ClockFaceFeature } from '../features/ClockFaceFeature';
+import { YandexRealty } from '../features/YandexRealty';
 import { RouteItem } from './types';
 
 export const routes: RouteItem[] = [
@@ -41,6 +42,14 @@ export const routes: RouteItem[] = [
     imgPreview: imgPreviewDuckDuckGoFrequentlyAskedQuestions,
     description:
       'FAQ вопросов с DuckDuckGo, с интересной анимацией открытия и закрытия ответа на вопрос',
+  },
+  {
+    route: 'YandexRealty',
+    path: '/yandex-realty',
+    isFeature: true,
+    component: YandexRealty,
+    imgPreview: '',
+    description: 'Виджет недвижимость с сайта yandex.ru',
   },
   {
     route: 'Page404',
