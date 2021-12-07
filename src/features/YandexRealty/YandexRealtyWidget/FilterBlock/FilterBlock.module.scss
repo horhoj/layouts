@@ -1,0 +1,28 @@
+@import "../variables";
+
+.wrap {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  & > li  {
+
+  }
+}
+
+.filterButton {
+  border: none;
+  background-color: $COLOR_BACKGROUND;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 20px;
+
+  &:hover {
+    background-color: $COLOR_HOVER;
+  }
+}
+
+.filterButtonActive {
+  background-color: $COLOR_HOVER;
+}

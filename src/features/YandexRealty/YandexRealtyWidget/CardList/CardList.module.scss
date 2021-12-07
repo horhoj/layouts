@@ -1,0 +1,11 @@
+.wrap {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  overflow-x: scroll;
+
+  scrollbar-width: none;
+   &::-webkit-scrollbar {
+    display: none;
+  }
+}

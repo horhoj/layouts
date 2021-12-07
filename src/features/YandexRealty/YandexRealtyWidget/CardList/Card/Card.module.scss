@@ -1,0 +1,51 @@
+@import "../../variables";
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  min-height: 230px;
+  border-radius: 20px;
+  background-color: $COLOR_HOVER;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  min-height: 160px;
+  background-color: red;
+  border-radius: 20px 20px 0 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+}
+
+.dataWrap {
+  padding: 10px 15px 15px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.priceWrap {
+  margin-top: 2px;
+
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.addressWrap {
+  margin-top: 20px;
+}
+
+.address {
+  color: #777;
+  font-size: 12px;
+}
