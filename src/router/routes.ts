@@ -4,6 +4,7 @@ import { MVideoSlider } from '../features/MVideoSlider';
 import imgPreviewMVideoSlider from '../features/MVideoSlider/imgPreview.png';
 import imgPreviewDuckDuckGoFrequentlyAskedQuestions from '../features/DuckDuckGoFrequentlyAskedQuestions/imgPreview.png';
 import imgPreviewClockFaceFeature from '../features/ClockFaceFeature/imgPreview.png';
+import imgPreviewYandexRealty from '../features/YandexRealty/imgPreview.png';
 import { DuckDuckGoFrequentlyAskedQuestions } from '../features/DuckDuckGoFrequentlyAskedQuestions';
 import { ClockFaceFeature } from '../features/ClockFaceFeature';
 import { YandexRealty } from '../features/YandexRealty';
@@ -48,7 +49,7 @@ export const routes: RouteItem[] = [
     path: '/yandex-realty',
     isFeature: true,
     component: YandexRealty,
-    imgPreview: '',
+    imgPreview: imgPreviewYandexRealty,
     description: 'Виджет недвижимость с сайта yandex.ru',
   },
   {

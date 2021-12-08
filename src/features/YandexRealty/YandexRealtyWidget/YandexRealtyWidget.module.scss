@@ -3,11 +3,12 @@
 .wrap {
   max-width: 650px;
   width: 100%;
-  //min-height: 375px;
   box-shadow: $BOX_SHADOW_VALUE;
   border-radius: 20px;
   padding: 20px;
   color: $COLOR;
+  position: relative;
+  user-select: none;
 }
 
 .titleBlockWrap {
@@ -20,4 +21,31 @@
 
 .cardListWrap {
   margin: 10px -10px 0;
+}
+
+
+.scrollButton {
+  background-image: url("./img/arrowforward.svg");
+  width: 50px;
+  height: 50px;
+  background-color: $COLOR_BACKGROUND;
+  color: black;
+  background-repeat: no-repeat;
+  background-size: 36px;
+  background-position: center;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: $BOX_SHADOW_VALUE;
+  top: 50%;
+  cursor: pointer;
+}
+
+
+.scrollButtonForward {
+  right: -15px;
+}
+
+.scrollButtonBack {
+  left: -15px;
+  transform: rotateY(180deg);
 }

@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import { forwardRef } from 'react';
 import { DataCardItem } from '../types';
 import styles from './CardList.module.scss';
 import { Card } from './Card';
@@ -7,20 +7,19 @@ interface CardListProps {
   dataCardList: DataCardItem[];
 }
 
-export const CardList: FC<CardListProps> = ({ dataCardList }) => {
-  useEffect(() => {
-    if (dataCardListWrapRef.current) {
-      dataCardListWrapRef.current.scrollTo(0, 0);
-    }
-  }, [dataCardList]);
+const CardListPrototype = forwardRef<HTMLDivElement, CardListProps>(
+  ({ dataCardList }, ref) => {
+    return (
+      <div className={styles.wrap} ref={ref}>
+        {dataCardList.map((dataCardItem) => (
+          <Card dataCardItem={dataCardItem} key={dataCardItem.id} />
+        ))}
+      </div>
+    );
+  },
+);
 
-  const dataCardListWrapRef = useRef<HTMLDivElement>(null);
+//Для устранения ошибки линтера об отсутствии displayName у CardList
+CardListPrototype.displayName = 'CardList';
 
-  return (
-    <div className={styles.wrap} ref={dataCardListWrapRef}>
-      {dataCardList.map((dataCardItem) => (
-        <Card dataCardItem={dataCardItem} key={dataCardItem.id} />
-      ))}
-    </div>
-  );
-};
+export const CardList = CardListPrototype;
