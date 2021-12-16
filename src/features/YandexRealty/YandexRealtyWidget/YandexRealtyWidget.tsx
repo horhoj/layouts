@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import styles from './YandexRealtyWidget.module.scss';
 import { TitleBlock } from './TitleBlock';
 import { FilterBlock } from './FilterBlock';
@@ -15,6 +15,16 @@ export const YandexRealtyWidget: FC = () => {
   const dataCardListFiltered = dataCardList.filter(
     (dataCardItem) => dataCardItem.dataFilterValue === currentFilter,
   );
+
+  useEffect(() => {
+    if (cardListRef.current) {
+      cardListRef.current.scrollBy({
+        left: -cardListRef.current.scrollWidth,
+        behavior: 'smooth',
+        top: 0,
+      });
+    }
+  }, [currentFilter]);
 
   const handleScrollBack = () => {
     if (cardListRef.current) {
