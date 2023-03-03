@@ -1,5 +1,7 @@
 init: docker-up install prod
 
+ddev:	docker-up install dev
+
 #all
 docker-up: docker-down
 	docker-compose up -d --build
@@ -21,7 +23,7 @@ console:
 	docker-compose exec --user $(shell id -u):$(shell id -g)  node sh -c "/bin/bash"
 
 dev:
-	docker-compose exec --user $(shell id -u):$(shell id -g)  node sh -c "yarn start --host=0.0.0.0"
+	docker-compose exec --user $(shell id -u):$(shell id -g)  node sh -c "export PORT=3005 && yarn start --host=0.0.0.0"
 
 prod:
 	docker-compose exec --user $(shell id -u):$(shell id -g)  node sh -c "yarn build"
